@@ -1,0 +1,20 @@
+server:
+  port: 8085
+
+application:
+  loans:
+    maxLoans: 3
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:librarydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+  h2:
+    console:
+      enabled: true
